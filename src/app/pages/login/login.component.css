@@ -1,0 +1,18 @@
+.containerLogin{
+    height: 398px;
+    width: 302px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.containerInputs{
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.displayLogin{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}

@@ -1,0 +1,53 @@
+
+.bgContainer{
+    background-color: #12131A;
+    position: absolute;
+    z-index: 100;
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../assets/bgFigure.svg');
+}
+.navbarContainer{
+    width: 250px;
+    background-color: #1C1C25;
+    border-radius: 0rem 1rem 1rem 0rem;
+    position: relative;
+    color: white;
+    height: clamp(627px,100vh,100vh);
+}
+.navbar{
+    height: 600px;
+    /* background-color: red; */
+    margin: 0 auto;
+    position: relative;
+    top: 27px;
+    width: 209px;
+    display: flex;
+    text-transform: capitalize;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbarTitle{
+    text-align: center;
+    font-size: 26.5px;
+}
+.navbarLi{
+    list-style: none;
+    height: 17px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+.navbarLi__bg{
+    background-color: #062141;
+    border-radius: 1rem;
+}
+.navbarUl{
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+}

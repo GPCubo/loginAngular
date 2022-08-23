@@ -1,0 +1,11 @@
+<label class="relativeLabel" >
+    <img *ngIf="this.formControl.value == 0" [src]="routeIcon" alt="iconInput" class="iconInput">
+    <input  [type]="typeInput" 
+            [placeholder]="textContent" 
+            class="inputStyle"
+            #input
+            (input)="changeInput()"
+            [formControl]="formControl" 
+            [ngClass]="{'formControlValid': formControl.touched == true && formControl.status == 'VALID',
+            'formControlInvalid': formControl.touched == true && formControl.status == 'INVALID'}">
+</label>

@@ -1,0 +1,15 @@
+<div class="displayLogin bgLogin">
+    <form #f="ngForm" class="containerLogin" (ngSubmit)="onSubmit(f)">
+        <img src="../../../assets/iconLogin.svg" alt="IconLogin">
+        <div class="containerInputs">
+            <app-input textContent="email" 
+                       routeIcon="../../../assets/iconUser.svg">
+            </app-input>
+            <app-input textContent="password"
+                        routeIcon="../../../assets/iconPassword.svg"
+                        typeInput="password">
+            </app-input>
+        </div>
+        <app-button textContent="LOG IN"></app-button>
+    </form>
+</div>

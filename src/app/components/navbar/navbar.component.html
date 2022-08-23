@@ -1,0 +1,36 @@
+<section class="navbarContainer">
+    <nav class="navbar">
+        <h1 class="navbarTitle">LOGO</h1>
+        <ul class="navbarUl">
+            <li class="navbarLi"
+                [ngClass]="{'navbarLi__bg': bgLi === 'dashboard'}">
+                <a routerLink="/dashboard" class="navbarA">
+                    <img src="../../../assets/iconDashboard.svg" alt="iconDashboard">
+                    <span>dashboard</span>
+                </a>
+            </li>
+            <li class="navbarLi"
+                [ngClass]="{'navbarLi__bg': bgLi === 'profile'}">
+                <a routerLink="/profile" class="navbarA">
+                    <img src="../../../assets/iconUser2.svg" alt="iconProfile">
+                    <span>profile</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbarUl navbarUl__border">
+            <li class="navbarLi navbarLi__mgTop"
+                [ngClass]="{'navbarLi__bg': bgLi === 'options'}">
+                <a routerLink="/options" class="navbarA">
+                    <img src="../../../assets/iconConfig.svg" alt="iconConfig">
+                    <span>options</span>
+                </a>
+            </li>
+            <li class="navbarLi navbarLi__mgBottom">
+                <a routerLink="/home" class="navbarA">
+                    <img src="../../../assets/iconLogout.svg" alt="iconLogout">
+                    <span>log out</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</section>

@@ -1,0 +1,29 @@
+.inputStyle{
+    height: 43px;
+width: 267px;
+border-radius: .4rem;
+background: transparent;
+border: 1.5px solid white;
+}
+
+.inputStyle::placeholder{
+    color: white;
+    line-height: none;
+    padding-left: 2.3rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.relativeLabel{
+    position: relative;
+}
+.iconInput{
+    position: absolute;
+    top: 0px;
+    margin: 0 19px 0 12px;
+}
+.formControlValid{
+    border-color: #5cb85c;
+}
+.formControlInvalid{
+    border-color: #d9534f;
+}
