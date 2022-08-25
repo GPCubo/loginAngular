@@ -12,7 +12,96 @@
   <style type="text/css">@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialicons/v138/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');}.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;}</style>
 <style>*{margin:0;padding:0;font-family:Montserrat,sans-serif}html,body{height:100%}body{margin:0;font-family:Roboto,Helvetica Neue,sans-serif}</style><link rel="stylesheet" href="styles.a8c4d5224aa6b864.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.a8c4d5224aa6b864.css"></noscript></head>
 <body>
+  <div id="loader" class="loader__bg">
+    <div class="loader"></div>
+  </div>
   <app-root></app-root>
-<script src="runtime.6923483953fce77a.js" type="module"></script><script src="polyfills.9de7623b75d501df.js" type="module"></script><script src="main.f0b74dcc5124d565.js" type="module"></script>
+  <script>
+    window.addEventListener("load",()=> {
+      console.log('qlq')
+      document.getElementById("loader").classList.add('loader__bg--off')
+    },false)
+  </script>
+  <style>
+    .loader__bg{
+  background-color:#12131a;
+  min-height: 100vh;
+}
+.loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+  }
+  .loader:before, .loader:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+  }
+  .loader:before {
+    animation: before 2s infinite;
+  }
+  .loader:after {
+    animation: after 2s infinite;
+  }
+  
+  @keyframes before {
+    0% {
+      width: 0.5em;
+      box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+    35% {
+      width: 2.5em;
+      box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+    70% {
+      width: 0.5em;
+      box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+    100% {
+      box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+  }
+  @keyframes after {
+    0% {
+      height: 0.5em;
+      box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+    35% {
+      height: 2.5em;
+      box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+    70% {
+      height: 0.5em;
+      box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+    100% {
+      box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+  }
+  /**
+   * Attempt to center the whole thing!
+   */
+  html,
+  body {
+    height: 100%;
+  }
+  
+  .loader {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+  }
+  .loader__bg--off{
+    display: none;
+  }
+  </style>
+<script src="runtime.e59f98fc740e71cc.js" type="module"></script><script src="polyfills.9de7623b75d501df.js" type="module"></script><script src="main.4eb781b71ebf5097.js" type="module"></script>
 
 </body></html>

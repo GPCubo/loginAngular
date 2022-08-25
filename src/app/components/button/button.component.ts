@@ -13,7 +13,7 @@ export class ButtonComponent implements AfterViewInit {
   
   ngAfterViewInit(): void {
     this.inputState.get().subscribe({
-      next: (data)=> this.isValid = data.isValid,
+      next: (data)=>  console.log(data),
       error: (err)=> console.error(err),
       complete: () => console.log('ready daddy')
     })

@@ -1,13 +1,14 @@
 import { AfterViewInit, Component,Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { PruebaService } from 'src/app/services/prueba.service';
-
+import { Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements AfterViewInit {
+  @Output() eventEmit = new EventEmitter<string>();
   @Input() textContent = '';
   @Input() routeIcon = '';
   @Input() typeInput = 'text';
@@ -22,6 +23,7 @@ export class InputComponent implements AfterViewInit {
     .subscribe((id)=> this.idArray = id)
   }
   changeInput(){
+    // this.eventEmit.emit()
     this.obsInput.set({status: this.formControl.status,textContent:this.textContent, value:this.formControl.value},this.idArray)
     // this.obsInput.set()
   }

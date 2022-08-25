@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '../pages/login/login.component';
 import { WatcherLoginGuard } from '../guards/watcher-login.guard';
-import { LoaderComponent } from '../components/loader/loader.component';
+import { RegisterComponent } from '../pages/register/register.component';
 
 const routes:Routes = [
   {path:'home',component:LoginComponent},
-  {path:'load',component:LoaderComponent},
+  {path:'register',component:RegisterComponent},
   {path:'',canActivate:[WatcherLoginGuard],
   loadChildren:  () => import('./private-routes/private-routes.module')
   .then(m => m.PrivateRoutesModule)},

@@ -1,6 +1,6 @@
 .inputStyle{
-    height: 43px;
-width: 267px;
+    height: 40px;
+width: 200px;
 border-radius: .4rem;
 background: transparent;
 border: 1.5px solid white;
@@ -10,8 +10,9 @@ border: 1.5px solid white;
     color: white;
     line-height: none;
     padding-left: 2.3rem;
+    font-size: 12px;
     font-weight: lighter;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .relativeLabel{
     position: relative;

@@ -6,7 +6,8 @@ import { BodyInput, BodyState } from '../interfaces/StateInputs';
 })
 
 export class PruebaService {
-  private stateInputs$ = new BehaviorSubject<BodyState>({isValid:0,allInputs:[]})
+  bodyOb = {isValid:0,allInputs:[]}
+  private stateInputs$ = new BehaviorSubject<BodyState>(this.bodyOb)
   private bodyState = this.stateInputs$.value;
   get():Observable<BodyState>{
     return this.stateInputs$.asObservable()
@@ -22,5 +23,8 @@ export class PruebaService {
     const updateValid = this.bodyState.allInputs.every((input)=> input.status === 'VALID') ? 1 : 0
     this.bodyState.isValid = updateValid
     this.stateInputs$.next(this.bodyState)
+  }
+  reset():void{
+    this.stateInputs$.next({isValid:0,allInputs:new Array()})
   }
 }

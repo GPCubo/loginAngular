@@ -1,5 +1,5 @@
 <label class="relativeLabel" >
-    <img *ngIf="this.formControl.value == 0" [src]="routeIcon" alt="iconInput" class="iconInput">
+    <img *ngIf="this.routeIcon.length &&this.formControl.value == 0" [src]="routeIcon" alt="iconInput" class="iconInput">
     <input  [type]="typeInput" 
             [placeholder]="textContent" 
             class="inputStyle"

@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { LoaderStatusService } from 'src/app/services/loader-status.service';
+import { LoginEndpointService } from 'src/app/services/login-endpoint.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,11 +9,10 @@ import { LoaderStatusService } from 'src/app/services/loader-status.service';
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
 
-  constructor(private loader: LoaderStatusService) { }
+  constructor(private http : LoginEndpointService) { }
 
   ngOnInit(): void {
   }
   ngAfterViewInit(): void {
-      this.loader.set(false);
   }
 }

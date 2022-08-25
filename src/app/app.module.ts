@@ -10,13 +10,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouteModule } from './route/route.module';
 import { LoaderComponent } from './components/loader/loader.component';
+import { RegisterComponent } from './pages/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InputComponent,
     ButtonComponent,
-    LoaderComponent
+    LoaderComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
